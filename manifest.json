@@ -1,8 +1,8 @@
 {
 
-  "name": "The Latest",
+  "name": "Angular Watcher",
   "version": "0.1",
-  "description": "Get the Latest news straight from your address bar",
+  "description": "Print the number of angular watches",
   "icons": { "16": "icons/icon16.png",
              "48": "icons/icon48.png",
             "128": "icons/icon128.png" },
@@ -16,7 +16,7 @@
   // http://code.google.com/chrome/extensions/browserAction.html
   "browser_action": {
     "default_icon":  "icons/icon19.png", // optional
-    "default_title": "Action Title",     // optional; shown in tooltip
+    "default_title": "Angular Watches",     // optional; shown in tooltip
     "default_popup": "src/popup.html"    // optional
   },
 
@@ -90,20 +90,20 @@
     "http://*.google.com/", // Refer to http://goo.gl/CPeqK http://goo.gl/U3Vev
     "bookmarks", // http://code.google.com/chrome/extensions/bookmarks.html
     "chrome://favicon/",
-    "clipboardRead", // document.execCommand('paste').
-    "clipboardWrite", // document.execCommand('copy' OR 'cut')
+    //"clipboardRead", // document.execCommand('paste').
+    //"clipboardWrite", // document.execCommand('copy' OR 'cut')
     "contextMenus", //http:///code.google.com/chrome/extensions/contextMenus.html
-    "cookies", // http://code.google.com/chrome/extensions/cookies.html
+    //"cookies", // http://code.google.com/chrome/extensions/cookies.html
     // "experimental", // http://code.google.com/chrome/extensions/dev/experimental.html
-    "fileBrowserHandler", // http://goo.gl/GqbrP
-    "geolocation", // http://dev.w3.org/geo/api/spec-source.html
-    "history", // http://code.google.com/chrome/extensions/history.html
+    //"fileBrowserHandler", // http://goo.gl/GqbrP
+    //"geolocation", // http://dev.w3.org/geo/api/spec-source.html
+    //"history", // http://code.google.com/chrome/extensions/history.html
     "idle", // http://code.google.com/chrome/extensions/idle.html
     "management", // http://code.google.com/chrome/extensions/management.html
     "notifications", // code.google.com/chrome/extensions/notifications.html
     "tabs", // http://code.google.com/chrome/extensions/tabs.html +windows.html
-    "tts", // http://code.google.com/chrome/extensions/tts.html
-    "ttsEngine", // http://code.google.com/chrome/extensions/ttsEngine.html
+    //"tts", // http://code.google.com/chrome/extensions/tts.html
+    //"ttsEngine", // http://code.google.com/chrome/extensions/ttsEngine.html
     "unlimitedStorage"
   ],
 
@@ -138,15 +138,12 @@
   // "background_page": "background.html",
 
   // http://code.google.com/chrome/extensions/content_scripts.html
-  /*
   "content_scripts": [
     {
-      "matches": ["http://www.google.com/*"],
-      "css": ["src/contentStyle.css"],
-      "js": ["lib/jquery.min.js", "src/contentScript.js"]
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/content-script.js"]
     }
   ],
-  */
 
   // http://code.google.com/chrome/extensions/npapi.html
   /*
